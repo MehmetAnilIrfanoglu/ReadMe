@@ -22,7 +22,7 @@ body {
 }
 
 .caption {
-    height: 130px;
+    height: 155px;
     overflow: hidden;
 }
 
@@ -40,8 +40,24 @@ body {
     color: #d17581;
 }
 
+.ratings button {
+    
+    color: #d17581;
+}
+
+    .ratings button:hover {
+        color: #c26470;
+    }
+
 .thumbnail {
+    height: 340px;
     padding: 0;
+
+}
+
+hr {
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 .thumbnail .caption-full {
