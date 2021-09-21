@@ -1,10 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
+using System.Web;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-using System.Text;
 
-namespace ReadMe.Entities
+namespace ReadMe.ReadMe.Entities
 {
     [Table("Notes")]
     public class Note : MyEntityBase
@@ -17,6 +18,11 @@ namespace ReadMe.Entities
         public int LikeCount { get; set; }
         public int CategoryId { get; set; }
 
+        public Note()
+        {
+            Comments = new List<Comment>();
+            Likes = new List<Liked>();
+        }
         public ReadMeUser Owner { get; set; }
         public virtual List<Comment> Comments { get; set; }
         public virtual Category Category { get; set; }

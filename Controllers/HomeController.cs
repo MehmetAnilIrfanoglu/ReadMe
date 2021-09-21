@@ -11,6 +11,7 @@ namespace ReadMe.Controllers
         // GET: Home
         public ActionResult Index()
         {
+            ReadMe_BusinessLayer.Test test = new ReadMe_BusinessLayer.Test();
             return View();
         }
     }

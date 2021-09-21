@@ -1,10 +1,13 @@
-﻿using ReadMe.Entities;
+﻿using ReadMe.ReadMe.Entities;
+using ReadMe.ReadMe_DataAccessLayer;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;
-using System.Text;
+using System.Linq;
+using System.Web;
 
-namespace ReadMeDataAccessLayer
+
+namespace ReadMe.ReadMe.DataAccessLayer
 {
     public class DatabaseContext : DbContext
     {
@@ -13,7 +16,9 @@ namespace ReadMeDataAccessLayer
         public DbSet<Comment> Comments { get; set; }
         public DbSet<Category> Categories { get; set; }
         public DbSet<Liked> Likes { get; set; }
-
+        public DatabaseContext()
+        {
+            Database.SetInitializer(new MyInitializer());
+        }
     }
-
 }

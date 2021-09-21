@@ -1,10 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
+using System.Web;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-using System.Text;
 
-namespace ReadMe.Entities
+namespace ReadMe.ReadMe.Entities
 {
     [Table("ReadMeUsers")]
     public class ReadMeUser : MyEntityBase
